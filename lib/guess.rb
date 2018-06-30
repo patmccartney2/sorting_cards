@@ -21,12 +21,11 @@ class Guess
     end
     if @card.suit == response[1] && @card.value == response[0]
       @response_boolean = true
-    else
-      false
     end
   end
 
   def feedback
+    correct?
     if @response_boolean == true
       return "Correct!"
     else
